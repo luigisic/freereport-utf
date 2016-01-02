@@ -141,8 +141,8 @@ const
     (Typ:256;Name: ''; X:0;    Y:0));
 
 
-function DeviceCapabilities(pDevice, pPort: PChar; fwCapability: Word; pOutput: PChar;
-  DevMode: PDeviceMode): Integer; stdcall; external winspl name 'DeviceCapabilitiesA';
+function DeviceCapabilities(pDevice, pPort: PWideChar; fwCapability: Word; pOutput: PWideChar;
+  DevMode: PDeviceMode): Integer; stdcall; external winspl name 'DeviceCapabilitiesW';
 
 {----------------------------------------------------------------------------}
 constructor TfrPrinter.Create;
